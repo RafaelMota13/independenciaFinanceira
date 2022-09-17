@@ -2,11 +2,16 @@
 Console.WriteLine("----Vivendo de dividendos----");
 Console.ResetColor();
 
-Console.Write("Gastos mensais (em R$): ");
-double gastos = Convert.ToDouble(Console.ReadLine());
+Console.Write("\nGastos mensais (em R$): ");
+decimal gastos = Convert.ToDecimal(Console.ReadLine());
 
 Console.Write("Rendimentos mensais (%): ");
-double rendimentos = Convert.ToDouble(Console.ReadLine());
+decimal rendimentos = Convert.ToDecimal(Console.ReadLine());
+
+decimal resultado = gastos/(rendimentos/100);
+
+
+Console.WriteLine($"\nPara receber {gastos:C} por mês com rendimentos de {rendimentos:N1}% você precisa ter investido {resultado:C}.\n");
 
 
 
